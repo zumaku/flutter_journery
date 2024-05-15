@@ -11,22 +11,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Zuma\'s Flutter Playground',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
-        useMaterial3: true,
-      ),
       home: Scaffold(
+        
         appBar: AppBar(
-          title: Text("Aplikasi Cari Pacar!"),
-
-          body: Center(
-            child: Text("Halo Dek.."),
-          ),
-
-          
+          title: Text("Aplikasiku"),
         ),
-      )
+
+        body: Center(
+          child: Text("Hello World")
+        ),
+      ),
     );
   }
 }
