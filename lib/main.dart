@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Center(
-            child: Text("Nome 2"),
+            child: Text("Nome 3"),
           ),
           backgroundColor: Colors.green,
           titleTextStyle: TextStyle(
@@ -27,9 +27,24 @@ class MyApp extends StatelessWidget {
           child: Container(
             margin: EdgeInsets.all(100),
             color: Colors.green,
+
             child: Center(
-              child: Text("Zul Fadli Ahmad"),
+              child: Container(
+                width: 100,
+                height: 100,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(50),
+                ),
+                child: Center(
+                  child: Text(
+                    "Zul Fadli Ahmad", 
+                    textAlign: TextAlign.center,
+                  )
+                ),
+              ),
             ),
+
           ),
         ),
       ),
