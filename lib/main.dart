@@ -13,9 +13,9 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Center(
-            child: Text("Tes Container"),
+            child: Text("Nome 2"),
           ),
-          backgroundColor: Colors.deepOrange,
+          backgroundColor: Colors.green,
           titleTextStyle: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.bold,
@@ -24,25 +24,11 @@ class MyApp extends StatelessWidget {
           ),
         ),
         body: Container(
-          color: Colors.deepOrange,
-
           child: Container(
-            margin: EdgeInsets.all(20),
-            color: Colors.amber,
-
-            child: Container(
-              margin: EdgeInsets.all(20),
-              color: Colors.redAccent,
-
-              child: Container(
-                margin: EdgeInsets.all(20),
-                color: Colors.blueAccent,
-
-                child: Container(
-                  margin: EdgeInsets.all(20),
-                  color: Colors.green,
-                ),
-              ),
+            margin: EdgeInsets.all(100),
+            color: Colors.green,
+            child: Center(
+              child: Text("Zul Fadli Ahmad"),
             ),
           ),
         ),
