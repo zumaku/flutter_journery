@@ -15,43 +15,27 @@ class MyApp extends StatelessWidget {
           title: Text("Aplikasi Container"),
           backgroundColor: Colors.blue,
         ),
-
         body: Column(
           children: <Widget>[
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                Container(
-                  width: 100,
-                  height: 100,
-                  color: Colors.red,
-                  margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
-                  child: Text("Kotak Merah"),
-                ),
-                Container(
-                  width: 100,
-                  height: 100,
-                  color: Colors.green,
-                  margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
-                  child: Text("Kotak Hijau"),
-                ),
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Strawberry Pavlova",
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                )
               ],
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
+              children: [
                 Container(
-                  width: 100,
-                  height: 100,
-                  color: Colors.blue,
-                  margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
-                  child: Text("Kotak Biru"),
-                ),
-                Container(
-                  width: 100,
-                  height: 100,
-                  color: Colors.yellow,
-                  child: Text("Kotak Kuning"),
+                  width: 500,
+                  child: Text(
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, ratione nesciunt laudantium harum consectetur eos dicta placeat impedit animi ut quos molestiae ex. Quae numquam modi dolorum velit aliquam! Autem.",
+                    // overflow: TextOverflow.ellipsis,
+                    // maxLines: 1,
+                    // softWrap: false,
+                  ),
                 ),
               ],
             ),
