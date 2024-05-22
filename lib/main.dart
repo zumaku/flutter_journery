@@ -16,58 +16,47 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.blue,
         ),
 
-        body: Row(
-          // Flex Box
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          
+        body: Column(
           children: <Widget>[
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.red,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.red,
+                  margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
+                  child: Text("Kotak Merah"),
+                ),
+                Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.green,
+                  margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
+                  child: Text("Kotak Hijau"),
+                ),
+              ],
             ),
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.red,
-            ),
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.red,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.blue,
+                  margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
+                  child: Text("Kotak Biru"),
+                ),
+                Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.yellow,
+                  child: Text("Kotak Kuning"),
+                ),
+              ],
             ),
           ],
         ),
-
-
-
-
-
-
-        // body: Container(
-        //   width: 200,
-        //   height: 100,
-        //   // padding: EdgeInsets.fromLTRB(10, 20, 30, 40),
-        //   padding: EdgeInsets.all(10),
-        //   // color: Colors.blue,
-
-        //   // Decoration
-        //   decoration: BoxDecoration(
-        //     color: Colors.yellow,
-        //     shape: BoxShape.circle,
-        //     border: Border.all(color: Colors.orange, width: 3)
-
-        //   ),
-
-
-        //   child: Text(
-        //     "Hallo",
-        //     style: TextStyle(
-        //       fontSize: 45,
-
-        //     ),
-        //   )
-        // ),
       ),
     );
   }
