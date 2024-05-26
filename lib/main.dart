@@ -9,39 +9,36 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("Aplikasi Container"),
-          backgroundColor: Colors.blue,
-        ),
-        body: Column(
-          children: <Widget>[
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "Strawberry Pavlova",
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                )
-              ],
-            ),
-            Row(
-              children: [
-                Container(
-                  width: 500,
-                  child: Text(
-                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, ratione nesciunt laudantium harum consectetur eos dicta placeat impedit animi ut quos molestiae ex. Quae numquam modi dolorum velit aliquam! Autem.",
-                    // overflow: TextOverflow.ellipsis,
-                    // maxLines: 1,
-                    // softWrap: false,
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
-      ),
+    return const MaterialApp(
+      home: DetailScreen(),
     );
+  }
+}
+
+class DetailScreen extends StatelessWidget {
+  const DetailScreen({super.key}); // Tambahkan titik koma di sini
+
+  @override
+  Widget build(BuildContext context) {
+    // Perbaiki sintaks di sini
+    return SafeArea(
+        child: Scaffold(
+      body: Column(
+        children: <Widget>[
+          Container(
+            margin: EdgeInsets.all(10),
+            child: Center(
+              child: Text(
+                "Farm House Lembang",
+                style: TextStyle(
+                  fontWeight: FontWeight.w800,
+                  fontSize: 24,
+                ),
+              )
+            ),
+          ),
+        ],
+      ),
+    ));
   }
 }
