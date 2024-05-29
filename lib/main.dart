@@ -1,55 +1,61 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("Belajar Butten"),
-          backgroundColor: Colors.blue,
-        ),
-        body: Column(
-          children: [
+      home: MyHomePage(),
+    );
+  }
+}
 
-            // Elevate Button
-            ElevatedButton(
-              onPressed: () {
-                // Aksi ketika tombol ditekan
-              },
-              child: Text('Elevated Button'),
-            ),
+class MyHomePage extends StatefulWidget {
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
 
-            // Text Button
-            TextButton(
-              onPressed: () {
-                // Aksi ketika tombol ditekan
-              },
-              child: Text('Text Button'),
-            ),
+class _MyHomePageState extends State<MyHomePage> {
+  String inputName = "";
+  String displayText = "";
 
-            // Outline Button
-            OutlinedButton(
-              onPressed: () {
-                // Aksi ketika tombol ditekan
-              },
-              child: Text('Outlined Button'),
-            ),
+  TextEditingController inputNameController = TextEditingController();
 
-            // Icon Button
-            IconButton(
-              icon: Icon(Icons.thumb_up),
-              onPressed: () {
-                // Aksi ketika tombol ditekan
-              },
-            ),
-          ],
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(displayText),
+      ),
+      body: Container(
+        margin: EdgeInsets.all(20),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              TextField(
+                controller: inputNameController, // Hubungkan controller ke TextField
+                decoration: InputDecoration(
+                  labelText: 'Enter your name',
+                ),
+                onChanged: (text) {
+                  setState(() {
+                    inputName = text; // Update inputName saat teks berubah
+                  });
+                },
+                onSubmitted: (text) {
+                  setState(() {
+                    displayText = text; // Update inputName saat teks berubah
+                  });
+                },
+              ),
+              SizedBox(height: 20), // Tambahkan jarak antara TextField dan teks
+              Text('Hello, $inputName!'), // Tampilkan teks berdasarkan input
+            ],
+          ),
         ),
       ),
     );
