@@ -12,32 +12,42 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Aplikasi Container"),
+          title: Text("Belajar Butten"),
           backgroundColor: Colors.blue,
         ),
         body: Column(
-          children: <Widget>[
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "Strawberry Pavlova",
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                )
-              ],
+          children: [
+
+            // Elevate Button
+            ElevatedButton(
+              onPressed: () {
+                // Aksi ketika tombol ditekan
+              },
+              child: Text('Elevated Button'),
             ),
-            Row(
-              children: [
-                Container(
-                  width: 500,
-                  child: Text(
-                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, ratione nesciunt laudantium harum consectetur eos dicta placeat impedit animi ut quos molestiae ex. Quae numquam modi dolorum velit aliquam! Autem.",
-                    // overflow: TextOverflow.ellipsis,
-                    // maxLines: 1,
-                    // softWrap: false,
-                  ),
-                ),
-              ],
+
+            // Text Button
+            TextButton(
+              onPressed: () {
+                // Aksi ketika tombol ditekan
+              },
+              child: Text('Text Button'),
+            ),
+
+            // Outline Button
+            OutlinedButton(
+              onPressed: () {
+                // Aksi ketika tombol ditekan
+              },
+              child: Text('Outlined Button'),
+            ),
+
+            // Icon Button
+            IconButton(
+              icon: Icon(Icons.thumb_up),
+              onPressed: () {
+                // Aksi ketika tombol ditekan
+              },
             ),
           ],
         ),
