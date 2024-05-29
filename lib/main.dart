@@ -5,58 +5,29 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  String inputName = "";
-  String displayText = "";
-
-  TextEditingController inputNameController = TextEditingController();
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(displayText),
-      ),
-      body: Container(
-        margin: EdgeInsets.all(20),
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              TextField(
-                controller: inputNameController, // Hubungkan controller ke TextField
-                decoration: InputDecoration(
-                  labelText: 'Enter your name',
-                ),
-                onChanged: (text) {
-                  setState(() {
-                    inputName = text; // Update inputName saat teks berubah
-                  });
-                },
-                onSubmitted: (text) {
-                  setState(() {
-                    displayText = text; // Update inputName saat teks berubah
-                  });
-                },
-              ),
-              SizedBox(height: 20), // Tambahkan jarak antara TextField dan teks
-              Text('Hello, $inputName!'), // Tampilkan teks berdasarkan input
-            ],
-          ),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("Hua"),
+          backgroundColor: Colors.amber[300],
         ),
+        body: Center(
+          child: Container(
+            width: 300,
+            height: 300,
+            color: Colors.amber[50],
+            // child: Image.asset("img/js_art.jpeg"),  // Cara 1
+            // child: Image(image: AssetImage("img/js_art.jpeg")),  // Cara 2
+            child: Image.network(
+              "https://akcdn.detik.net.id/community/media/visual/2024/05/08/presiden-joko-widodo-jokowi_169.jpeg?w=700&q=90",
+              fit: BoxFit.cover,
+            )
+          )
+        )
       ),
     );
   }
