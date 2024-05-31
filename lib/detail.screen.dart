@@ -11,7 +11,7 @@ class DetailScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              Image.asset("imgs/jalan-asia-afrika.jpg"),
+              Image.asset("imgs/farm-house.jpg"),
               Container(
                 margin: const EdgeInsets.only(top: 16.0),
                 child: const Text(
@@ -25,25 +25,25 @@ class DetailScreen extends StatelessWidget {
               ),
               Container(
                 margin: const EdgeInsets.symmetric(vertical: 16.0),
-                child: Row(
+                child: const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     Column(
-                      children: const <Widget>[
+                      children: <Widget>[
                         Icon(Icons.calendar_today),
                         SizedBox(height: 8.0),
                         Text('Open Everyday'),
                       ],
                     ),
                     Column(
-                      children: const <Widget>[
+                      children: <Widget>[
                         Icon(Icons.access_time),
                         SizedBox(height: 8.0),
                         Text('09:00 - 20:00')
                       ],
                     ),
                     Column(
-                      children: const <Widget>[
+                      children: <Widget>[
                         Icon(Icons.monetization_on),
                         SizedBox(height: 8.0),
                         Text('Rp 25.000'),
@@ -60,7 +60,28 @@ class DetailScreen extends StatelessWidget {
                   style: TextStyle(fontSize: 16.0),
                 ),
               ),
-              Image.network("https://media-cdn.tripadvisor.com/media/photo-m/1280/16/a9/33/43/liburan-di-farmhouse.jpg"),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Container(
+                      height: 150,
+                      padding: EdgeInsets.all(10),
+                      child: Image.asset("imgs/jalan-asia-afrika.jpg"),
+                    ),
+                    Container(
+                      height: 150,
+                      padding: EdgeInsets.all(10),
+                      child: Image.asset("imgs/kawah-putih.jpg"),
+                    ),
+                    Container(
+                      height: 150,
+                      padding: EdgeInsets.all(10),
+                      child: Image.asset("imgs/ranca-upas.jpg"),
+                    ),
+                  ],
+                ),
+              ),
               
             ],
           ),
