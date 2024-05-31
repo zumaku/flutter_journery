@@ -17,6 +17,10 @@ class MyApp extends StatelessWidget {
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
+    double screenWidth = MediaQuery.of(context).size.width;
+    double containerHeight = screenWidth / 3;
+
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -364,11 +368,190 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             )
-          ],)
+          ],),
         
           // Postingan
+          Column(children: [
+            // Row 1
+            Row(children: [
+              Expanded(
+                child: Padding(
+                  padding: EdgeInsets.all(1.5),
+                  child: Container(
+                    width: screenWidth,
+                    height: containerHeight,
+                    // color: Colors.blue,
+                    decoration: BoxDecoration(image: DecorationImage(
+                      image: AssetImage('images/post1.jpg'),
+                      fit: BoxFit.cover,
+                    )
+                  ),
+                ))
+              ),
+              Expanded(
+                child: Padding(
+                  padding: EdgeInsets.all(1.5),
+                  child: Container(
+                    width: screenWidth,
+                    height: containerHeight,
+                    // color: Colors.red,
+                    decoration: BoxDecoration(image: DecorationImage(
+                      image: AssetImage('images/post2.jpeg'),
+                      fit: BoxFit.cover,
+                    )
+                  ),
+                ))
+              ),
+              Expanded(
+                child: Padding(
+                  padding: EdgeInsets.all(1.5),
+                  child: Container(
+                    width: screenWidth,
+                    height: containerHeight,
+                    // color: Colors.green,
+                    decoration: BoxDecoration(image: DecorationImage(
+                      image: AssetImage('images/post3.jpeg'),
+                      fit: BoxFit.cover,
+                    )
+                  ),
+                ))
+              ),
+            ]),
+
+            // Row 2
+            Row(children: [
+              Expanded(
+                child: Padding(
+                  padding: EdgeInsets.all(1.5),
+                  child: Container(
+                    width: screenWidth,
+                    height: containerHeight,
+                    // color: Colors.blue,
+                    decoration: BoxDecoration(image: DecorationImage(
+                      image: AssetImage('images/post4.jpeg'),
+                      fit: BoxFit.cover,
+                    )
+                  ),
+                ))
+              ),
+              Expanded(
+                child: Padding(
+                  padding: EdgeInsets.all(1.5),
+                  child: Container(
+                    width: screenWidth,
+                    height: containerHeight,
+                    // color: Colors.red,
+                    decoration: BoxDecoration(image: DecorationImage(
+                      image: AssetImage('images/post5.jpg'),
+                      fit: BoxFit.cover,
+                    )
+                  ),
+                ))
+              ),
+              Expanded(
+                child: Padding(
+                  padding: EdgeInsets.all(1.5),
+                  child: Container(
+                    width: screenWidth,
+                    height: containerHeight,
+                    // color: Colors.green,
+                    decoration: BoxDecoration(image: DecorationImage(
+                      image: AssetImage('images/post6.jpeg'),
+                      fit: BoxFit.cover,
+                    )
+                  ),
+                ))
+              ),
+            ]),
+
+            // Row 3
+            Row(children: [
+              Expanded(
+                child: Padding(
+                  padding: EdgeInsets.all(1.5),
+                  child: Container(
+                    width: screenWidth,
+                    height: containerHeight,
+                    // color: Colors.blue,
+                    decoration: BoxDecoration(image: DecorationImage(
+                      image: AssetImage('images/post7.jpg'),
+                      fit: BoxFit.cover,
+                    )
+                  ),
+                ))
+              ),
+              Expanded(
+                child: Padding(
+                  padding: EdgeInsets.all(1.5),
+                  child: Container(
+                    width: screenWidth,
+                    height: containerHeight,
+                    // color: Colors.red,
+                    decoration: BoxDecoration(image: DecorationImage(
+                      image: AssetImage('images/post8.jpeg'),
+                      fit: BoxFit.cover,
+                    )
+                  ),
+                ))
+              ),
+              Expanded(
+                child: Padding(
+                  padding: EdgeInsets.all(1.5),
+                  child: Container(
+                    width: screenWidth,
+                    height: containerHeight,
+                    // color: Colors.green,
+                    decoration: BoxDecoration(image: DecorationImage(
+                      image: AssetImage('images/post9.jpg'),
+                      fit: BoxFit.cover,
+                    )
+                  ),
+                ))
+              ),
+            ]),
+          
+          ]),
         ],
-      ))
+      )),
+
+      bottomNavigationBar: BottomAppBar(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: <Widget>[
+            IconButton(
+              icon: Icon(Icons.home_outlined),
+              onPressed: () {},
+            ),
+            IconButton(
+              icon: Icon(Icons.search),
+              onPressed: () {},
+            ),
+            IconButton(
+              icon: Icon(Icons.add_box_outlined),
+              onPressed: () {},
+            ),
+            IconButton(
+              icon: Icon(Icons.slow_motion_video),
+              onPressed: () {},
+            ),
+            Container(
+              width: 24,
+              height: 24,
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color: Colors.grey,
+                  width: 2,
+                ),
+                borderRadius: BorderRadius.circular(50),
+                image: DecorationImage(
+                  image: AssetImage("images/profile.jpg"),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            )
+          ],
+        ),
+      )
     );
   }
 }
