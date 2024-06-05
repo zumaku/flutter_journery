@@ -4,7 +4,8 @@ class MataKuliah {
   String dosen;
   String jmlSks;
   String semester;
-  List<String> imageUrls;
+  String imageCover;
+  List<String> imageAsset;
   List<String> materi;
 
   MataKuliah({
@@ -13,20 +14,21 @@ class MataKuliah {
     required this.dosen,
     required this.jmlSks,
     required this.semester,
-    required this.imageUrls,
+    required this.imageCover,
+    required this.imageAsset,
     required this.materi,
   });
 }
 
-List<MataKuliah> mataKuliahList = [
+var mataKuliahList = [
   MataKuliah(
     nama: 'Data Base',
     deskripsi: 'Mata kuliah ini mempelajari tentang sistem basis data, yaitu bagaimana cara merancang, mengimplementasikan, dan mengelola basis data. Mahasiswa akan belajar tentang berbagai model basis data seperti relasional, NoSQL, dan distribusi data. Fokus utama adalah pada bahasa SQL dan teknik optimasi query.',
     dosen: 'Sri Wahyuni, S.Kom, M.T.',
     jmlSks: '3',
     semester: '3',
-    imageUrls: [
-      'images/database1.jpeg',
+    imageCover: 'images/database1.jpeg',
+    imageAsset: [
       'images/database2.jpeg',
       'images/database3.jpeg',
       'images/database4.jpeg',
@@ -45,8 +47,8 @@ List<MataKuliah> mataKuliahList = [
     dosen: 'Muhammad Nur Akbar, S.T, M.T.',
     jmlSks: '3',
     semester: '5',
-    imageUrls: [
-      'images/datamining1.jpeg',
+    imageCover: 'images/datamining1.jpeg',
+    imageAsset: [
       'images/datamining2.jpeg',
       'images/datamining3.jpeg',
       'images/datamining4.jpeg',
@@ -65,8 +67,8 @@ List<MataKuliah> mataKuliahList = [
     dosen: 'Wahyudin Saputra, S.Kom, M.T.',
     jmlSks: '3',
     semester: '5',
-    imageUrls: [
-      'images/datawarehouse1.jpeg',
+    imageCover: 'images/datawarehouse1.jpeg',
+    imageAsset: [
       'images/datawarehouse2.jpeg',
       'images/datawarehouse3.jpeg',
       'images/datawarehouse4.jpeg',
@@ -85,8 +87,8 @@ List<MataKuliah> mataKuliahList = [
     dosen: 'Darmatasia, S.Pd., M.Kom.',
     jmlSks: '3',
     semester: '7',
-    imageUrls: [
-      'images/deeplearning1.jpeg',
+    imageCover: 'images/deeplearning1.jpeg',
+    imageAsset: [
       'images/deeplearning2.jpeg',
       'images/deeplearning3.jpeg',
       'images/deeplearning4.jpeg',
@@ -105,8 +107,8 @@ List<MataKuliah> mataKuliahList = [
     dosen: 'Mustikasari, S.Kom., M.Kom.',
     jmlSks: '3',
     semester: '6',
-    imageUrls: [
-      'images/mechinelearning1.jpeg',
+    imageCover: 'images/mechinelearning1.jpeg',
+    imageAsset: [
       'images/mechinelearning2.jpeg',
       'images/mechinelearning3.jpeg',
       'images/mechinelearning4.jpeg',
@@ -125,8 +127,8 @@ List<MataKuliah> mataKuliahList = [
     dosen: 'Asep Indra Syahyadi, S.Kom., M.Kom.',
     jmlSks: '3',
     semester: '4',
-    imageUrls: [
-      'images/proggramingweb1.jpeg',
+    imageCover: 'images/proggramingweb1.jpeg',
+    imageAsset: [
       'images/proggramingweb2.jpeg',
       'images/proggramingweb3.jpeg',
       'images/proggramingweb4.jpeg',
@@ -146,8 +148,8 @@ List<MataKuliah> mataKuliahList = [
     dosen: 'Asep Indra Syahyadi, S.Kom., M.Kom.',
     jmlSks: '3',
     semester: '6',
-    imageUrls: [
-      'images/proggramingmobile1.jpeg',
+    imageCover: 'images/proggramingmobile1.jpeg',
+    imageAsset: [
       'images/proggramingmobile2.jpeg',
       'images/proggramingmobile3.jpeg',
       'images/proggramingmobile4.jpeg',
@@ -166,8 +168,8 @@ List<MataKuliah> mataKuliahList = [
     dosen: 'Asep Indra Syahyadi, S.Kom., M.Kom.',
     jmlSks: '3',
     semester: '7',
-    imageUrls: [
-      'images/embeddedsystem1.jpeg',
+    imageCover: 'images/embeddedsystem1.jpeg',
+    imageAsset: [
       'images/embeddedsystem2.jpeg',
       'images/embeddedsystem3.jpeg',
       'images/embeddedsystem4.jpeg',
@@ -186,8 +188,8 @@ List<MataKuliah> mataKuliahList = [
     dosen: 'Darmatasia, S.Pd., M.Kom.',
     jmlSks: '3',
     semester: '6',
-    imageUrls: [
-      'images/artificialintelligence1.jpeg',
+    imageCover: 'images/artificialintelligence1.jpeg',
+    imageAsset: [
       'images/artificialintelligence2.jpeg',
       'images/artificialintelligence3.jpeg',
       'images/artificialintelligence4.jpeg',
@@ -206,11 +208,11 @@ List<MataKuliah> mataKuliahList = [
     dosen: 'Hariani, S.Kom, M.Kom.',
     jmlSks: '3',
     semester: '7',
-    imageUrls: [
-      'images/cybersecurity1.jpg',
-      'images/cybersecurity2.jpg',
-      'images/cybersecurity3.jpg',
-      'images/cybersecurity4.jpg',
+    imageCover: 'images/cybersecurity1.jpeg',
+    imageAsset: [
+      'images/cybersecurity2.jpeg',
+      'images/cybersecurity3.jpeg',
+      'images/cybersecurity4.jpeg',
     ],
     materi: [
       'Cyber Attacks',
