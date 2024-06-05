@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application/pages/page1.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,24 +10,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("Hua"),
-          backgroundColor: Colors.amber[300],
-        ),
-        body: ListView.builder(
-          itemCount: 5,
-          itemBuilder: (context, index) {
-            return Text(
-              "ZUMAKU $index",
-              style: TextStyle(
-                fontSize: 32,
-              ),
-            );
-          },
-        ),
-      ),
-    );
+    return MaterialApp(home: Page1(),);
   }
 }
