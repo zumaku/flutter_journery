@@ -46,7 +46,7 @@ class Page3 extends StatelessWidget {
             onPressed: () => {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => Page2()),
+                MaterialPageRoute(builder: (context) => Page2(nama: 'Zumaku',)),
               )
             },
           ),

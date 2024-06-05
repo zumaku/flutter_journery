@@ -3,7 +3,9 @@ import 'package:flutter_application/pages/page2.dart';
 import 'package:flutter_application/pages/page3.dart';
 
 class Page1 extends StatelessWidget {
-  const Page1({super.key});
+  Page1({super.key});
+
+  String namaku = "Zuma";
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +37,7 @@ class Page1 extends StatelessWidget {
             onPressed: () => {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => Page2()),
+                MaterialPageRoute(builder: (context) => Page2(nama: namaku)),
               )
             },
           ),

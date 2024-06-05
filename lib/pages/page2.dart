@@ -3,7 +3,8 @@ import 'package:flutter_application/pages/page1.dart';
 import 'package:flutter_application/pages/page3.dart';
 
 class Page2 extends StatelessWidget {
-  const Page2({super.key});
+  final String nama;
+  const Page2({super.key, required this.nama});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,8 @@ class Page2 extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-        ),)
+        ),),
+        Text('$nama')
       ],),
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
