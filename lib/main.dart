@@ -15,9 +15,17 @@ class MyApp extends StatelessWidget {
           title: Text("Hua"),
           backgroundColor: Colors.amber[300],
         ),
-        body: Center(
-          
-        )
+        body: ListView.builder(
+          itemCount: 5,
+          itemBuilder: (context, index) {
+            return Text(
+              "ZUMAKU $index",
+              style: TextStyle(
+                fontSize: 32,
+              ),
+            );
+          },
+        ),
       ),
     );
   }
