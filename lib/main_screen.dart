@@ -9,7 +9,19 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Wisata Bandung'),
+        title: const Text('Mata Kuliah'),
+        actions: <Widget>[
+          IconButton(
+            padding: EdgeInsets.all(10),
+            icon: Icon(Icons.person),
+            onPressed: () {
+              // Navigator.push(
+                // context,
+                // MaterialPageRoute(builder: (context) => ProfileScreen()),
+              // );
+            },
+          ),
+        ],
       ),
       body: ListView.builder(
         itemBuilder: (context, index) {
