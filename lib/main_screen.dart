@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application/detail_screen.dart';
-import 'package:flutter_application/models/tourism_place.dart';
+import 'package:flutter_application/models/mata_kuliah.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -8,6 +8,8 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
+      // App Bar
       appBar: AppBar(
         title: const Text('Mata Kuliah'),
         actions: <Widget>[
@@ -23,22 +25,28 @@ class MainScreen extends StatelessWidget {
           ),
         ],
       ),
+
+      // Body
       body: ListView.builder(
         itemBuilder: (context, index) {
-          final TourismPlace place = tourismPlaceList[index];
+
+          final MataKuliah matkul = mataKuliahList[index];
+
           return InkWell(
             onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return DetailScreen(place: place);
-              }));
+              // Navigator.push(context, MaterialPageRoute(builder: (context) {
+              //   return DetailScreen(place: place);
+              // }));
             },
+
             child: Card(
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Expanded(
                     flex: 1,
-                    child: Image.asset(place.imageAsset),
+                    child: Image.asset(matkul.imageCover),
+                    // child: Image.asset("images/database1.jpeg"),
                   ),
                   Expanded(
                     flex: 2,
@@ -48,13 +56,27 @@ class MainScreen extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Text(
-                            place.name,
-                            style: const TextStyle(fontSize: 16.0),
+                            matkul.nama,
+                            style: const TextStyle(
+                              fontSize: 16.0,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                           const SizedBox(
                             height: 10,
                           ),
-                          Text(place.location),
+                          Row(children: [
+                            Icon(Icons.person_3),
+                            Text(matkul.dosen),
+                          ],),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          Text(
+                            matkul.deskripsi,
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 2,
+                          )
                         ],
                       ),
                     ),
@@ -62,9 +84,40 @@ class MainScreen extends StatelessWidget {
                 ],
               ),
             ),
+            // child: Card(
+            //   child: Row(
+            //     crossAxisAlignment: CrossAxisAlignment.start,
+            //     children: <Widget>[
+            //       Expanded(
+            //         flex: 1,
+            //         child: Image.asset(place.imageAsset),
+            //       ),
+            //       Expanded(
+            //         flex: 2,
+            //         child: Padding(
+            //           padding: const EdgeInsets.all(8.0),
+            //           child: Column(
+            //             crossAxisAlignment: CrossAxisAlignment.start,
+            //             children: <Widget>[
+            //               Text(
+            //                 place.name,
+            //                 style: const TextStyle(fontSize: 16.0),
+            //               ),
+            //               const SizedBox(
+            //                 height: 10,
+            //               ),
+            //               Text(place.location),
+            //             ],
+            //           ),
+            //         ),
+            //       )
+            //     ],
+            //   ),
+            // ),
           );
         },
-        itemCount: tourismPlaceList.length,
+        
+        itemCount: mataKuliahList.length,
       ),
     );
   }
