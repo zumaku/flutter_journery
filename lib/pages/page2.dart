@@ -13,6 +13,55 @@ class Page2 extends StatelessWidget {
         title: Text("Page #2"),
         backgroundColor: Colors.amber[500],
       ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.amber[500],
+              ),
+              child: Text(
+                'Drawer Header',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                ),
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.arrow_circle_right_outlined),
+              title: Text('Page 1'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Page1()),
+                );
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.arrow_circle_right_outlined),
+              title: Text('Page 2'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Page2(nama: "Zumaku")),
+                );
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.arrow_circle_right_outlined),
+              title: Text('Page 3'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Page3()),
+                );
+              },
+            ),
+          ],
+        ),
+      ),
       body: Column(children: [
         Center(child: Container(
           margin: EdgeInsets.all(10),
