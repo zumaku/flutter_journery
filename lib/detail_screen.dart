@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 // import 'package:flutter_application/models/tourism_place.dart';
@@ -57,143 +58,195 @@ class DetailScreen extends StatelessWidget {
                             Icon(Icons.person_3),
                             Text("Ibu In"),
                           ],),
-                          SizedBox(height: 15),
+                          SizedBox(height: 20),
 
                           Text(
-                            "Deskripsi",
+                            "Semester",
                             style: TextStyle(
-                              fontSize: 14,
+                              fontSize: 16,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
                           SizedBox(height: 5),
                           Text(
-                            "Mata kuliah ini mempelajari tentang sistem basis data, yaitu bagaimana cara merancang, mengimplementasikan, dan mengelola basis data. Mahasiswa akan belajar tentang berbagai model basis data seperti relasional, NoSQL, dan distribusi data. Fokus utama adalah pada bahasa SQL dan teknik optimasi query.",
+                            "Tersedia untuk semester 3",
                             style: TextStyle(
                               fontSize: 12,
                             ),
                           ),
+                          SizedBox(height: 20),
+
+                          Text(
+                            "Jumlah SKS",
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          SizedBox(height: 5),
+                          Text(
+                            "3 SKS",
+                            style: TextStyle(
+                              fontSize: 12,
+                            ),
+                          ),
+                          SizedBox(height: 20),
                         ],
                       ),
                     ),
                   ),
                 ],
               ),
+              const SizedBox(height: 15),
+
+              
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Expanded(
+                    flex: 1,
+                    child: Container(
+                      margin: EdgeInsets.all(5),
+                      height: 100, // Tentukan tinggi container
+                      decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        image: DecorationImage(
+                          image: AssetImage('images/database2.jpeg'),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Container(
+                      margin: EdgeInsets.all(5),
+                      height: 100, // Tentukan tinggi container
+                      decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        image: DecorationImage(
+                          image: AssetImage('images/database2.jpeg'),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Container(
+                      margin: EdgeInsets.all(5),
+                      height: 100, // Tentukan tinggi container
+                      decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        image: DecorationImage(
+                          image: AssetImage('images/database2.jpeg'),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  ),
+                ]
+              ),
+              const SizedBox(height: 15),
+
+              const Text(
+                "Materi",
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(height: 5),
+              Wrap(
+                spacing: 8.0,
+                runSpacing: 8.0,
+                children: [
+                  Container(
+                    padding: EdgeInsets.all(5),
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        width: 2,
+                      ),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: const Text(
+                      'This is a dynamic',
+                      style: TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w600,
+                      )
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(5),
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        width: 2,
+                      ),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: const Text(
+                      'This is a dynamic',
+                      style: TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w600,
+                      )
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(5),
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        width: 2,
+                      ),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: const Text(
+                      'This is a dynamic',
+                      style: TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w600,
+                      )
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(5),
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        width: 2,
+                      ),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: const Text(
+                      'This is a dynamic',
+                      style: TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w600,
+                      )
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 15),
+
+              const Text(
+                "Deskripsi Mata Kuliah",
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(height: 5),
+              Text(
+                "Mata kuliah ini mempelajari tentang sistem basis data, yaitu bagaimana cara merancang, mengimplementasikan, dan mengelola basis data. Mahasiswa akan belajar tentang berbagai model basis data seperti relasional, NoSQL, dan distribusi data. Fokus utama adalah pada bahasa SQL dan teknik optimasi query.",
+                style: TextStyle(
+                  fontSize: 12,
+                ),
+              ),
             ],
           ),
         ),
       ),
-
-
-        // child: Column(
-        //   crossAxisAlignment: CrossAxisAlignment.stretch,
-        //   children: <Widget>[
-        //     Stack(
-        //       children: <Widget>[
-        //         Image.asset(place.imageAsset),
-        //         SafeArea(
-        //           child: Padding(
-        //             padding: const EdgeInsets.all(8.0),
-        //             child: Row(
-        //               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        //               children: [
-        //                 CircleAvatar(
-        //                   backgroundColor: Colors.grey,
-        //                   child: IconButton(
-        //                     icon: const Icon(
-        //                       Icons.arrow_back,
-        //                       color: Colors.white,
-        //                     ),
-        //                     onPressed: () {
-        //                       Navigator.pop(context);
-        //                     },
-        //                   ),
-        //                 ),
-        //                 const FavoriteButton(),
-        //               ],
-        //             ),
-        //           ),
-        //         ),
-        //       ],
-        //     ),
-        //     Container(
-        //       margin: const EdgeInsets.only(top: 16.0),
-        //       child: Text(
-        //         place.name,
-        //         textAlign: TextAlign.center,
-        //         style: const TextStyle(
-        //           fontSize: 30.0,
-        //           fontFamily: 'Staatliches',
-        //         ),
-        //       ),
-        //     ),
-        //     Container(
-        //       margin: const EdgeInsets.symmetric(vertical: 16.0),
-        //       child: Row(
-        //         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        //         children: <Widget>[
-        //           Column(
-        //             children: <Widget>[
-        //               const Icon(Icons.calendar_today),
-        //               const SizedBox(height: 8.0),
-        //               Text(
-        //                 place.openDays,
-        //                 style: informationTextStyle,
-        //               ),
-        //             ],
-        //           ),
-        //           Column(
-        //             children: <Widget>[
-        //               const Icon(Icons.access_time),
-        //               const SizedBox(height: 8.0),
-        //               Text(
-        //                 place.openTime,
-        //                 style: informationTextStyle,
-        //               ),
-        //             ],
-        //           ),
-        //           Column(
-        //             children: <Widget>[
-        //               const Icon(Icons.monetization_on),
-        //               const SizedBox(height: 8.0),
-        //               Text(
-        //                 place.ticketPrice,
-        //                 style: informationTextStyle,
-        //               ),
-        //             ],
-        //           ),
-        //         ],
-        //       ),
-        //     ),
-        //     Container(
-        //       padding: const EdgeInsets.all(16.0),
-        //       child: Text(
-        //         place.description,
-        //         textAlign: TextAlign.center,
-        //         style: const TextStyle(
-        //           fontSize: 16.0,
-        //           fontFamily: 'Oxygen',
-        //         ),
-        //       ),
-        //     ),
-        //     SizedBox(
-        //       height: 150,
-        //       child: ListView(
-        //         scrollDirection: Axis.horizontal,
-        //         children: place.imageUrls.map((url) {
-        //           return Padding(
-        //             padding: const EdgeInsets.all(4.0),
-        //             child: ClipRRect(
-        //               borderRadius: BorderRadius.circular(10),
-        //               child: Image.network(url),
-        //             ),
-        //           );
-        //         }).toList(),
-        //       ),
-        //     ),
-        //   ],
-        // ),
-      // ),
     );
   }
 }
