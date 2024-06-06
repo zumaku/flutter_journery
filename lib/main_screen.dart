@@ -34,9 +34,9 @@ class MainScreen extends StatelessWidget {
 
           return InkWell(
             onTap: () {
-              // Navigator.push(context, MaterialPageRoute(builder: (context) {
-              //   return DetailScreen(place: place);
-              // }));
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return DetailScreen(matkul: matkul);
+              }));
             },
 
             child: Card(
@@ -73,7 +73,7 @@ class MainScreen extends StatelessWidget {
                             height: 20,
                           ),
                           Text(
-                            matkul.deskripsi,
+                            matkul.deskripsiSingkat,
                             overflow: TextOverflow.ellipsis,
                             maxLines: 2,
                           )

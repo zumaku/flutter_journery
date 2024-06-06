@@ -12,8 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Mata Kuliah',
       theme: ThemeData(),
-      // home: MainScreen(),
-      home: DetailScreen(),
+      home: const MainScreen(),
     );
   }
 }
