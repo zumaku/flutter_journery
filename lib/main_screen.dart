@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application/detail_screen.dart';
-import 'package:flutter_application/models/mata_kuliah.dart';
-import 'package:flutter_application/profile_screen.dart';
+import 'package:MatKul/detail_screen.dart';
+import 'package:MatKul/models/mata_kuliah.dart';
+import 'package:MatKul/profile_screen.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({Key? key}) : super(key: key);

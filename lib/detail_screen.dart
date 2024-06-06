@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_application/models/mata_kuliah.dart';
+import 'package:MatKul/models/mata_kuliah.dart';
 
-var informationTextStyle = const TextStyle(fontFamily: 'Oxygen');
+// var informationTextStyle = const TextStyle(fontFamily: 'Oxygen');
 
 class DetailScreen extends StatelessWidget {
   final MataKuliah matkul;
