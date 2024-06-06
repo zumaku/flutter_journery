@@ -64,9 +64,9 @@ class DetailScreen extends StatelessWidget {
                           ),
                           const SizedBox(height: 20),
 
-                          Text(
-                            matkul.dosen,
-                            style: const TextStyle(
+                          const Text(
+                            "Dosen",
+                            style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
                             ),
@@ -75,9 +75,15 @@ class DetailScreen extends StatelessWidget {
                           Row(children: [
                             const Icon(
                               Icons.person_3,
-                              size: 16
+                              size: 14
                             ),
-                            Text(matkul.dosen),
+                            const SizedBox(width: 5),
+                            Expanded(
+                              child: Text(
+                                matkul.dosen,
+                                overflow: TextOverflow.visible
+                              ),
+                            ),
                           ],),
                           const SizedBox(height: 20),
 
