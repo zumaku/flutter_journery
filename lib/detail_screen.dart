@@ -197,6 +197,7 @@ class DetailScreen extends StatelessWidget {
                   fontSize: 12,
                 ),
               ),
+              const SizedBox(height: 20),
             ],
           ),
         ),

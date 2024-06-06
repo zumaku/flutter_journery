@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application/detail_screen.dart';
 import 'package:flutter_application/models/mata_kuliah.dart';
+import 'package:flutter_application/profile_screen.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -17,10 +18,10 @@ class MainScreen extends StatelessWidget {
             padding: EdgeInsets.all(10),
             icon: Icon(Icons.person),
             onPressed: () {
-              // Navigator.push(
-                // context,
-                // MaterialPageRoute(builder: (context) => ProfileScreen()),
-              // );
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ProfileScreen()),
+              );
             },
           ),
         ],
@@ -46,7 +47,6 @@ class MainScreen extends StatelessWidget {
                   Expanded(
                     flex: 1,
                     child: Image.asset(matkul.imageCover),
-                    // child: Image.asset("images/database1.jpeg"),
                   ),
                   Expanded(
                     flex: 2,
@@ -83,11 +83,9 @@ class MainScreen extends StatelessWidget {
                   )
                 ],
               ),
-            ),
-            
+            ),            
           );
         },
-        
         itemCount: mataKuliahList.length,
       ),
     );
