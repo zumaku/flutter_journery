@@ -1,62 +1,71 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application/applicationColor.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  bool isRed = false;
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('State Management Profider'),
-      ),
-      body: Center(
-        child: Column(
-          children: [
-            AnimatedContainer(
-              duration: Duration(milliseconds: 100),
-              width: 100,
-              height: 100,
-              color: isRed ?Colors.red[600] : Colors.green[600],
+      home: ChangeNotifierProvider<ApplicationColor>(
+        create: (BuildContext context) => ApplicationColor(),
+        child: Scaffold(
+          //AppBar
+          appBar: AppBar(
+            title: Consumer<ApplicationColor>(
+              builder: (BuildContext context, applicationColor, _) => Text(
+                "State Management Provider", 
+              style: TextStyle(
+                color: applicationColor.color, 
+              ),),
             ),
-            Row(
+          ),
+          //Body
+          body: Center(
+            child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text("Green"),
-                Switch(
-                  value: isRed,
-                  onChanged: (value) => {
-                    setState(() {
-                      isRed = value;
-                    })
-                  },
+                //Consumer for AnimatedContainer
+                Consumer<ApplicationColor>(
+                  builder: (context, applicationColor, _) => AnimatedContainer(
+                    width: 100,
+                    height: 100,
+                    color: applicationColor.color,
+                    duration: Duration(milliseconds: 500),
+                  ),
                 ),
-                Text("Red"),
+                //Row
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    //Text
+                    Text("AB"), //Amber
+                    //Consumer for Switch
+                    Consumer<ApplicationColor>(
+                      builder: (BuildContext context, applicationColor, _) => Switch(
+                        value: applicationColor.isLightBlue,
+                        onChanged: (value) {
+                          applicationColor.toggleColor(value);
+                        },
+                      ),
+                    ),
+                    //Text
+                    Text("LB"), //LightBlue
+                  ],
+                )
               ],
-            )
-          ],
+            ),
+          ),
         ),
       ),
     );
