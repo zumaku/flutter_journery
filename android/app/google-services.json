@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "274952164384",
+    "project_id": "prak-mobile-6e459",
+    "storage_bucket": "prak-mobile-6e459.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:274952164384:android:0bdd978e983ec577c55845",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkJQiJ3iPtaLpPH9wfksnTST5eTq1NjVM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
